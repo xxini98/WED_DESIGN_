@@ -1,0 +1,232 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  line-height: 1.5;
+  box-sizing: border-box;
+  color: #333333;
+}
+.wrap {
+  position: relative;
+  width: 1200px;
+  height: 700px;
+  margin: 0 auto;
+}
+header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: space-between;
+  z-index: 50;
+}
+.logo {
+  margin: auto 0;
+}
+.depth1 {
+  display: flex;
+  width: 700px;
+  margin-top: 60px;
+}
+.link-depth1 {
+  width: 25%;
+  height: 40px;
+  background: blue;
+}
+.link-depth1 > a {
+  display: block;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #ffffff;
+}
+.link-depth1 > a:hover {
+  background: lightblue;
+  color: #333;
+}
+.depth2 {
+  display: block;
+  width: 100%;
+  height: 180px;
+  background: lightcyan;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.depth1:hover .depth2 {
+  visibility: visible;
+  opacity: 1;
+}
+.depth2 li {
+  text-align: center;
+}
+.depth2 li > a {
+  display: block;
+  padding: 10px;
+}
+.depth2 li > a:hover {
+  background: lightblue;
+}
+.slide {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.slideWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  display: flex;
+}
+.slideWrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 200px;
+}
+.tabsWrap {
+  position: relative;
+  margin: 10px 10px 10px 0;
+  width: 390px;
+  height: 180px;
+}
+.tab > a {
+  display: inline-block;
+  font-size: 18px;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #eee;
+}
+.tab.active > a {
+  background: blue;
+  color: #ffffff;
+}
+.active .tab-cont {
+  display: block;
+}
+.tab-gallery {
+  position: absolute;
+  top: 0;
+  left: 100px;
+}
+.tab-cont {
+  display: none;
+  margin-top: 10px;
+}
+.lst-bbs li {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.lst-bbs a {
+  display: block;
+  width: 60%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.lst-gallery {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: space-around;
+  text-align: center;
+}
+.lst-gallery img {
+  width: 80%;
+}
+.banner {
+  margin: 10px 20px 10px 0;
+}
+.goto {
+  margin: 10px 0px 10px;
+}
+footer {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background: lightblue;
+}
+.logo-foot {
+  margin: auto 0;
+  padding-right: 300px;
+}
+.logo-foot img {
+  filter: grayscale();
+}
+.foot-content {
+  margin: auto 0;
+  text-align: center;
+}
+.foot-content a {
+  position: relative;
+  margin-right: 10px;
+}
+.foot-content a::after {
+  content: "|";
+  position: absolute;
+  top: 0;
+  right: -10px;
+}
+.foot-content a:last-child::after {
+  display: none;
+}
+.modalWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.modal {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.modal-rap {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border: 3px solid blue;
+  border-radius: 50px;
+}
+.modal h2 {
+  padding-bottom: 50px;
+}
+.modal-button {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+}
+.modal-button button {
+  border: 1px solid #000;
+  background: white;
+  padding: 10px;
+}
+.modalWrap.on {
+  visibility: visible;
+  opacity: 1;
+}
