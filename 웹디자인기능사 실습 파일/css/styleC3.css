@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; text-align: center; color: #333; list-style: none;}
+.clearfix::before, .clearfix::after{display: block; content: ''; clear: both;}
+
+.wrap{width: 1000px; height: 650px;}
+
+.left{width: 200px; height: 650px; float: left;}
+.right{width: 800px; height: 650px; float: left;}
+
+
+/*header*/
+header{width: 200px; height: 650px; background-color: #eee;}
+.logo{width: 200px; height: 100px; padding-top: 30px;}
+.nav{width: 200px; height: 550px; padding: 10px;}
+.menu{width: 180px;}
+.menu .main li a{display: block; width: 180px; height: 40px; line-height: 40px; font-weight: 700; background-color: #fff;}
+.menu .main li{position: relative;}
+.menu .sub{display: none; position: absolute; top: 0; left: 180px; z-index: 10;}
+.menu .sub li a{background-color: #eee; font-weight: 400;}
+.menu ul li a:hover{background-color: #ff8f1e; color: #fff;}
+
+/*slide*/
+.slide{width: 800px; height: 350px; overflow: hidden;}
+.slide .list{width: 2400px; height: 350px; position: relative; z-index: 1;}
+.slide .list a{float: left;}
+.slide .list a img{display: block;}
+
+
+
+/*contents*/
+.contents{width: 800px; height: 200px;}
+.contents > div{height: 200px; float: left; padding-top: 10px;}
+.contents .con-menu .con-title{width: 100px; height: 40px;}
+.contents .con-menu .con-title a{display: block; line-height: 40px; font-weight: 700; color: #fff; background-color: #333;}
+.contents .con-menu .con-box {width: 290px; height: 140px; border: 2px solid #eee;}
+.con1{width: 300px; padding-left: 5px;}
+.contents .con1 .con-menu .con-box{padding: 10px;}
+.contents .con1 .con-menu .con-box ul li{text-align: left;}
+.contents .con1 .con-menu .con-box ul li a span{float: right;}
+.con2{width: 300px; padding-left: 5px;}
+.contents .con2 .con-menu .con-box img{display: block; float: left; width: 90px; margin: 25px 2px;}
+.contents .con2 .con-menu .con-box img:hover{opacity: 0.6;}
+.con3{width: 200px; padding-left: 5px;}
+
+
+/*footer*/
+footer{width: 800px; height: 100px; background-color: #ddd;}
+footer > div{float: left;}
+.footleft{padding-top: 30px;}
+.footright{width: 600px; padding-top: 30px;}
+
+
+
+
+/*popup*/
+.popup{display: none; position: absolute; z-index: 1000; top: 50%; left: 50%; margin-top: -250px; margin-left: -250px; width: 500px; height: 500px; padding: 20px; border: 2px solid #eee; background-color: #fff;}
+.popup h2{margin-bottom: 10px;}
+.popup .close{position: absolute; bottom: 20px; right: 20px; width: 100px; height: 40px; line-height: 40px; text-align: center; color: #fff; background-color: #333;}

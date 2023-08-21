@@ -1,0 +1,58 @@
+@charset "utf-8";
+*{padding: 0; margin: 0; box-sizing: border-box; text-decoration: none; list-style: none; color: #333;}
+.clearfix::before, .clearfix::after{display: block; content:''; clear:both;}
+
+.wrap{width: 1000px; height: 650px;}
+
+.left{float: left; width: 200px; height: 650px;}
+.right{float: left; width: 800px; height: 650px;}
+
+/*header*/
+header{width: 200px; height: 650px; background-color: #e8e8e8;}
+.logo{width: 200px; height: 100px;}
+.logo img{margin-top: 30px;}
+
+.nav{width: 200px; height: 550px; padding: 10px;}
+.menu{width: 180px;}
+.menu ul li a{display: block; width: 180px; height: 50px; line-height: 50px; font-weight: 600; text-align: center;}
+.menu .main li a{background-color: #333; color: #fff;}
+.menu .sub{display: none;}
+.menu .sub li a{background-color: #fff; font-weight: 300; color: #333;}
+.menu ul li a:hover{background-color: #111; color: #fff;}
+
+
+
+/*slide*/
+.slide{width: 800px; height: 350px; overflow: hidden;}
+.slide img{display: block;}
+
+
+/*contents*/
+.contents{width: 800px; height: 200px;}
+.contents > div{float: left; height: 200px; padding-top: 10px;}
+.con1{width: 400px; padding-left: 10px;}
+.tab-menu .tab-btn li{float: left;}
+.tab-menu .tab-btn li.active a{color: #fff; background-color: #333;}
+.tab-menu .tab-btn a{display: block; width: 190px; height: 40px; line-height: 40px; text-align: center; font-size: 17px; background-color: #eee;}
+.tab-menu .tab-cont div{display: block; border: 2px solid #eee; width: 380px; height: 180px; padding: 50px 10px;}
+.tab-menu .tab-cont ul li a span{float: right;}
+.tab-menu .tab-cont .gallery a img{display: block; float: left;}
+.tab-menu .tab-cont .gallery a:nth-child(2) img{margin: 0 13px;}
+.con2{width: 200px;}
+.con3{width: 200px; padding-left: 5px;}
+
+
+
+/*footer*/
+footer{width: 800px; height: 100px; background-color: #eee;}
+footer > div{float: left; height: 100px;}
+.footleft{width: 200px; padding-top: 30px;}
+.footright{width: 600px; padding-top: 30px; padding-left: 10px;}
+
+
+
+
+/*popup*/
+.popup{display: none; position: absolute; z-index: 1000; top: 50%; left: 50%; width: 500px; height: 500px; margin-top: -250px; margin-left: -250px; background-color: #fff; border: 2px solid #eee; padding: 20px;}
+.popup h2{margin-bottom: 10px;}
+.popup .close{position: absolute; bottom: 20px; right: 20px; display: block; width: 100px; height: 40px; line-height: 40px; text-align: center; color: #fff; background-color: #333;}

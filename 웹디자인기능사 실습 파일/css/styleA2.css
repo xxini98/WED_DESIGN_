@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box; color: #333;}
+a{text-decoration: none;}
+ul{list-style: none;}
+.clearfix::before, .clearfix::after{display: block; content: ''; clear: both;}
+
+.wrap{width: 1200px; height: 700px; margin: 0 auto;}
+
+/*header*/
+header{position: relative;}
+.logo{height: 100px; float: left; width: 200px;}
+.logo img{margin-top: 30px;}
+
+nav{height: 100px; width: 1000px; float: left;}
+.nav{float: right; width: 700px; margin-top: 50px; position: relative; z-index: 3;}
+
+.nav ul.main li{float: left; width: 25%;}
+.nav ul.main li a{display: block; text-align: center; font-size: 18px; line-height: 50px; font-weight: 600; color: #fff; background-color: #00913a;}
+
+.nav ul.sub{display: none;}
+.nav ul.sub li{width: 100%;}
+.nav ul.sub li a{display: block; background-color: #00913a; font-weight: 300;}
+
+.nav ul li a:hover{background-color: #006529;}
+
+.menu-bg{display: none; position: absolute; left: 0; top: 100px; background-color: #00913a; height: 150px; width: 100%; z-index: 2;}
+
+/*slide*/
+.slide{height: 300px; overflow: hidden;}
+.slide .list {position: relative;}
+.img{position: relative; z-index: 1;}
+
+
+
+/*contents*/
+.contents > div{float: left; width: 400px; height: 200px; padding-top: 10px;}
+
+.contents > div > h2 {display: block; width: 100px; height: 40px;}
+.contents > div > h2 > a {display: block; font-size: 17px; text-align: center; line-height: 40px; color:#fff; background-color: #00913a;}
+.contents > div > ul{width: 380px; height: 140px; border: 2px solid #eee;}
+
+.contents .con1 ul {padding: 12px;}
+.contents .con1 ul li a{line-height: 14px;}
+.contents .con1 ul li a span {float: right;}
+
+.contents .con2{padding-left: 10px;}
+.contents .con2 ul li{float: left;}
+.contents .con2 ul{padding: 12px;}
+.contents .con2 ul li:nth-child(2) img{margin: 0 10px;}
+
+.contents .con3 img{float: right;}   
+
+/*footer*/
+footer > div {float: left; width: 300px;}
+.foot1 img{margin-top: 30px;}
+.foot2{width: 600px; text-align: center; line-height: 20px; padding: 30px;}
+.foot3 select{width: 140px; height: 30px; float: right; margin-top: 35px;}
+
+/*popup*/
+.modal, .popup{display: none;}
+.modal{width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); position: absolute; left: 0; top: 0; z-index: 4;}
+.popup{width: 500px; height: 500px; border: 2px solid #eee; position: absolute; left: 50%; top:50%; margin-left: -250px; margin-top: -250px; background-color: #fff; z-index: 5; padding: 20px;}
+.popup h2{margin-bottom: 10px;}
+.popup p{line-height: 24px;}
+.popup .close{position:absolute; bottom: 20px; right: 20px; background-color: #00913a; color: #fff; display: block; width: 100px; text-align: center; line-height: 40px; height: 40px; font-size: 17px; font-weight: 600;}

@@ -1,0 +1,267 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  line-height: 1.5;
+  color: #333;
+}
+
+.inner {
+  display: flex;
+}
+header {
+  position: relative;
+  width: 200px;
+  background: lightpink;
+}
+.logo a {
+  display: block;
+  /* text-align: center; */
+  /* img 태그가 inline 일 경우 */
+}
+.logo img {
+  display: block;
+  margin: auto;
+}
+#gnb .depth1 {
+  padding: 0 30px;
+}
+#gnb .depth1 > li > a {
+  display: block;
+  position: relative;
+  padding: 11px 0 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+#gnb .depth1 > li > a:hover {
+  color: #1d7bff;
+}
+#gnb .depth1 > li > a::after {
+  content: ">";
+  position: absolute;
+  top: 10px;
+  right: 0;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+#gnb .depth1 > .active > a::after {
+  transform: rotate(90deg);
+}
+
+#gnb .active .depth2 {
+  max-height: 500px;
+  padding-top: 10px;
+  opacity: 1;
+}
+#gnb .depth2 {
+  overflow: hidden;
+  max-height: 0;
+  padding-top: 0;
+  opacity: 0;
+  /* transition: all .3s; */
+}
+#gnb .depth2 a {
+  display: block;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #555;
+}
+#gnb .depth2 a:hover {
+  background: #1d7bff;
+  color: #fff;
+}
+
+/* util */
+.util {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.util a {
+  position: relative;
+  display: block;
+  padding: 5px;
+  margin-top: -5px;
+}
+.util a::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 1px;
+  height: 15px;
+  background: red;
+  /* opacity: 0.5; */
+}
+.util a:first-child::before {
+  display: none;
+}
+.util span {
+  display: block;
+  opacity: 0.5;
+}
+
+main {
+  position: relative;
+  flex-grow: 1;
+  width: calc(100% - 200px);
+}
+.quick {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+.quick a {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.quick img {
+  display: block;
+  width: 80px;
+}
+
+.slide {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+}
+.slide ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* animation: ani-slide 10s cubic-bezier(0.72, 0.01, 0.26, 0.99) infinite; */
+}
+@keyframes ani-slide {
+  0% {
+    top: 0;
+  }
+  30% {
+    top: 0;
+  }
+  33% {
+    top: -100%;
+  }
+  63% {
+    top: -100%;
+  }
+  66% {
+    top: -200%;
+  }
+  96% {
+    top: -200%;
+  }
+  100% {
+    top: 0;
+  }
+}
+.slide img {
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: 0 50%;
+}
+
+.banner {
+  height: 200px;
+  padding: 20px;
+}
+.banner a {
+  display: block;
+}
+.banner img {
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.tabs-wrap {
+  position: relative;
+  height: 250px;
+  margin: 20px;
+  padding-top: 60px;
+}
+.tabs-wrap::before {
+  content: "";
+  position: absolute;
+  top: 47px;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 3px;
+  background: blue;
+}
+.tabs-wrap .tab-tit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  border: 3px solid #ccc;
+  border-bottom: 3px solid blue;
+  background: #eee;
+  text-align: center;
+}
+.tabs-wrap .tab-tit button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+}
+.tabs-wrap .active .tab-tit {
+  z-index: 10;
+  border: 3px solid blue;
+  border-bottom: 3px solid #fff;
+  background: #fff;
+}
+.tabs-wrap .tit-gallery {
+  left: 147px;
+}
+.tabs-wrap .tab-cont {
+  display: none;
+}
+.tabs-wrap .active .tab-cont {
+  display: block;
+}
+.lst-bbs a {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.lst-bbs a p {
+  overflow: hidden;
+  width: 75%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 16px;
+}
+.lst-gallery {
+  display: flex;
+  justify-content: space-between;
+}
+.lst-gallery li {
+  width: 24%;
+}
+.lst-gallery img {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+footer {
+  height: 100px;
+  background: lightgreen;
+}

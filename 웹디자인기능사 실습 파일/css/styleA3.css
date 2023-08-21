@@ -1,0 +1,54 @@
+@charset "utf-8";
+*{margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; color: #333; list-style: none;}
+.clearfix::before, .clearfix::after{display: block; content: ''; clear: both;}
+
+.wrap{width: 1200px; height: 700px; margin-left: auto; margin-right: auto;}
+
+/*header*/
+.logo{float: left; height: 100px; width: 200px;}
+.logo img{margin-top: 30px;}
+
+.nav{float: left; height: 100px; width: 1000px; position: relative; z-index: 5;}
+.nav .menu{float: right;}
+.nav .menu ul.main{float: left; margin-top: 50px;}
+.nav .menu ul.main li{width: 170px; height: 50px;}
+.nav .menu ul.main li a{display: block; background-color: #333; color: #fff; width: 100%; height: 100%; text-align: center; font-size: 18px; font-weight: 600; line-height: 50px;}
+
+.nav .menu ul.sub{display: none;}
+.nav .menu ul.sub li{margin-top: 0;}
+.nav .menu ul.sub li a{font-weight: 300;}
+
+.nav .menu ul li a:hover{background-color: #111;}
+
+/*slide*/
+.slide{height: 300px; overflow: hidden; position: relative; z-index: 1;}
+.slide .list{position: relative;}
+.slide img{display: block; position: relative;}
+
+/*con*/
+.con > div{width: 400px; height: 200px; float: left; padding-top: 10px;}
+.con .con1 .tab-btn ul li{width: 100px; height: 40px; float: left;}
+.con .con1 .tab-btn ul li a{font-weight: 700; line-height: 40px; background-color: #eee; color: #333; width: 100%; height: 100%; display: block; text-align: center;}
+.con .con1 .tab-btn ul li.active a{color:#fff; background-color: #333;}
+.con .con1 .tab-cont > div {width: 380px; height: 140px; border: 2px solid #eee;}
+
+.con .con1 .tab-cont .notice{padding: 10px; line-height: 24px;}
+.con .con1 .tab-cont .notice span{float: right;}
+.con .con1 .tab-cont .gallery{padding: 10px; display: none;}
+.con .con1 .tab-cont .gallery img{display: block; float: left;}
+.con .con1 .tab-cont .gallery:nth-child(2) img{margin: 0 4px;}
+
+.con .con2{padding-left: 10px;}
+.con .con3{padding-left: 20px;}
+
+/*foot*/
+.foot1{width: 200px; height: 100px; float: left;}
+.foot1 img{margin-top: 30px;}
+.footr{width: 1000px; float: left;}
+.foot2{padding-top: 15px; text-align: center; width: 1000px; height: 50px;}
+.foot3{padding-top: 15px; text-align: center; width: 1000px; height: 50px;}
+
+/*popup*/
+.popup{display: none; position: absolute; z-index:100; top:50%; left:50%; margin-top:-250px; margin-left: -250px; width: 500px; height: 500px; border: 2px solid #eee; padding: 20px; background-color: #fff;}
+.popup h2{margin-bottom: 10px;}
+.popup .close{position:absolute; bottom:20px; right: 20px; font-weight: 700; color:#fff; background-color: #333; width: 80px; height: 40px; line-height: 40px; text-align: center;}
