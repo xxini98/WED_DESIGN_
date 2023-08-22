@@ -251,13 +251,10 @@ main {
   display: flex;
   justify-content: space-between;
 }
-.lst-gallery li {
-  width: 24%;
-}
 .lst-gallery img {
   display: block;
-  width: 100%;
-  height: 190px;
+  width: 100px;
+  height: 100%;
   object-fit: cover;
 }
 
