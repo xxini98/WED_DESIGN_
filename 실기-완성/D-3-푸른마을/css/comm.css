@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  line-height: 1.5;
+  box-sizing: border-box;
+  color: #333333;
+}
+.wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.inner {
+  display: flex;
+}
+header {
+  width: 200px;
+  height: 850px;
+}
+.logo {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+}
+#gnb {
+  position: relative;
+  display: flex;
+  margin-top: 30px;
+}
+.depth1 {
+  margin: 0 auto;
+}
+.depth1 li {
+  position: relative;
+
+  width: 150px;
+  line-height: 60px;
+  text-align: center;
+  background: #5890ff;
+  color: #ffffff;
+  transition: all 0.4s;
+}
+.depth1 li a {
+  color: #ffffff;
+}
+.depth1 li:hover {
+  background: #4976d0;
+}
+.depth1 li:hover a {
+  font-weight: bold;
+}
+.depth1:hover .depth2 {
+  display: flex;
+}
+#gnb:hover .depth-bg {
+  display: flex;
+}
+.depth2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 140px;
+  z-index: 14;
+  transition: all 0.3s;
+}
+.depth-bg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 170px;
+  width: 10000px;
+  height: 240px;
+  background: #5890ff;
+  z-index: 10;
+  transition: all 0.3s;
+}
+main {
+  width: calc(100% - 200px);
+  position: relative;
+}
+.slide {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.slidewrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slidewrap li {
+  display: none;
+}
+.slidewrap li:first-child {
+  display: block;
+}
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.goto {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 300px;
+  padding: 10px;
+  background: #4976d0;
+  z-index: 99;
+}
+.gotowrap {
+  width: 100%;
+  height: 33.333%;
+  text-align: center;
+}
+.gotowrap li {
+  margin-bottom: 20px;
+}
+.gotowrap li:last-child {
+  margin-bottom: 0px;
+}
+.gotowrap img {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+}
+.banner {
+  height: 200px;
+  padding: 10px;
+}
+.banner a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tabs {
+  position: relative;
+  height: 250px;
+  padding: 10px;
+}
+.tab-tit {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 50px;
+  text-align: center;
+}
+.gallery-tit {
+  left: 120px;
+}
+.tab-tit a {
+  display: inline-block;
+  width: 110px;
+  line-height: 50px;
+  background: #4976d0;
+}
+.lst-con {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  width: 1600px;
+  height: 170px;
+  border: 1px solid #000;
+}
+
+.lst-bbs li {
+  display: flex;
+  margin: 10px 30px;
+  justify-content: space-between;
+}
+.lst-bbs a {
+  width: 70%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.lst-gallery {
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+}
+.lst-gallery li {
+  width: 33.33%;
+  text-align: center;
+}
+.lst-gallery img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+.lst-gallery span {
+  padding-top: 30px;
+  display: block;
+}
+.tab.on .tab-tit a {
+  background: #5890ff;
+  color: #ffffff;
+}
+.tab.on .lst-con {
+  display: block;
+}
+footer {
+  display: flex;
+  width: 100%;
+  height: 120px;
+  background: #4976d0;
+  align-items: center;
+}
+.logo-foot {
+  filter: grayscale();
+  margin-right: 500px;
+}
+.footmenu {
+  margin-bottom: 30px;
+}
+.footmenu a {
+  position: relative;
+  margin-right: 30px;
+}
+.footmenu a::after {
+  content: "|";
+  position: absolute;
+  top: 0;
+  right: -20px;
+}
+.modalwarp {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 300;
+  background: rgba(0, 0, 0, 0.144);
+  justify-content: center;
+  align-items: center;
+}
+.modalbx {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  background: white;
+  padding: 30px;
+  text-align: center;
+}
+.modalbx h2 {
+  margin-bottom: 30px;
+}
+.modalbx button {
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  width: 100px;
+  height: 40px;
+  background: white;
+}
+.modalwarp.active {
+  display: flex;
+}
