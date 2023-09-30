@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  line-height: 1.5;
+  box-sizing: border-box;
+  color: #333333;
+}
+
+.slide {
+  position: relative;
+  width: 1400px;
+  height: 700px;
+  background: lavender;
+  overflow: hidden;
+}
+.slidewrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 300%;
+  height: 100%;
+}
+.slidewrap li {
+  width: 100%;
+  height: 100%;
+}
+.slidewrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
